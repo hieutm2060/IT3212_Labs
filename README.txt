@@ -1,39 +1,25 @@
-LAB 1 - LAM QUEN VISUAL STUDIO VA LAP TRINH CONSOLE
-Mon: Lap trinh .NET - IT3212
-Sinh vien: [Ho va ten] - MSSV: [Ma sinh vien]
+LAB 2 - LỚP, ĐỐI TƯỢNG, CONSTRUCTOR VÀ ĐÓNG GÓI (IT3212 - Lập trình .NET)
+Project: Lab02_OOPBasics (Console, .NET 8 - mở bằng Visual Studio 2022)
 
-1. CAU TRUC THU MUC
-   IT3212_Labs.sln              Solution
-   Lab01_Console/               Project Console (.NET 8)
-     Program.cs                 Menu chinh chon bai 1..10
-     Helper.cs                  Ham nhap du lieu co kiem tra hop le
-     Bai01_ThongTinCaNhan.cs    ... den ...
-     Bai10_VeHinh.cs            Moi bai nam trong mot file rieng
+1. CÁCH CHẠY
+   - Mở Lab02_OOPBasics.csproj bằng Visual Studio 2022 (hoặc tạo Console project rồi chép các tệp .cs vào).
+   - Nhấn F5 hoặc chạy: dotnet run
+   - Menu chính: 6, 7, 8, 9, 10 tương ứng Bài 6 -> Bài 10, 0 để thoát.
+   - Nên đặt Console dùng UTF-8 (chương trình đã tự đặt Console.OutputEncoding).
 
-2. CACH CHAY
-   Cach 1 - Visual Studio 2022:
-     - Mo IT3212_Labs.sln, chon Lab01_Console lam Startup Project, nhan F5 (hoac Ctrl+F5).
-   Cach 2 - Dong lenh (can .NET SDK 8):
-     cd Lab01_Console
-     dotnet run
-   (Neu dung .NET Framework 4.8: tao Console App (.NET Framework) moi
-    va them cac file .cs vao project.)
+2. PHẦN ĐÃ HOÀN THÀNH
+   - Bài 6  : SanPham.cs           - mã, tên, đơn giá, số lượng; TinhThanhTien(); kiểm tra dữ liệu.
+   - Bài 7  : TaiKhoanNganHang.cs  - NapTien, RutTien, ChuyenTien; không cho số dư âm.
+   - Bài 8  : NhanVien.cs          - lương = lương cơ bản x hệ số + phụ cấp; in bảng lương.
+   - Bài 9  : HinhChuNhat.cs       - constructor, thuộc tính kiểm tra cạnh > 0; chu vi, diện tích.
+   - Bài 10 : QuanLySinhVien.cs    - menu thêm, sửa, xóa, tìm kiếm, sắp xếp, thống kê (List<SinhVien>).
+   - Hỗ trợ: SinhVien.cs (lớp của Bài 1-4), NhapLieu.cs (nhập liệu + xử lý ngoại lệ), Program.cs (menu chính).
 
-3. HUONG DAN SU DUNG
-   Chay chuong trinh, nhap so 1..10 de chon bai, 0 de thoat.
+3. DỮ LIỆU THỬ
+   - Mỗi bài có sẵn >= 5 bản ghi mẫu (Bài 6, 8, 10) và các ca kiểm thử dữ liệu sai (giá trị âm, chuỗi rỗng, rút quá số dư...).
+   - Bài 7: TK 1001 (5.000.000) và TK 1002 (2.000.000).
+   - Bài 10: SV01..SV05 nạp sẵn khi khởi động.
 
-4. DU LIEU THU
-   Bai 1 : "Nguyen Van An", 2005          -> tuoi gan dung = nam hien tai - 2005
-   Bai 2 : r=3, h=5                       -> Sxq = 94.25; V = 141.37
-   Bai 3 : 9.5 / 7 / 12                   -> Xuat sac / Kha / bao loi ngoai [0,10]
-   Bai 4 : n=10 -> Tong = 55; cuu chuong 7
-   Bai 5 : 10 va 3 -> 3; 10 va 0 -> chia cho 0; 10 va abc -> sai dinh dang
-   Bai 6 : (1,-3,2) -> x1=2, x2=1; (1,2,1) -> nghiem kep -1; (1,1,1) -> vo nghiem
-   Bai 7 : 4 7 -2 10 9 -> tong 28, TB 5.60, max 10, min -2, 3 so chan
-   Bai 8 : n=50 -> 2 3 5 7 11 13 17 19 23 29 31 37 41 43 47
-   Bai 9 : 25 -> hai muoi lam; 99 -> chin muoi chin
-   Bai 10: n=5 -> tam giac vuong dac / rong, hinh vuong rong
-
-5. PHAN DA HOAN THANH
-   [x] Bai 1 - 5 (co huong dan)    [x] Bai 6 - 10 (tu thuc hien)
-   Tat ca bai deu kiem tra du lieu nhap va xu ly ngoai le co ban.
+4. GHI CHÚ
+   - Tiền dùng kiểu decimal để tránh sai số; nhập số thực dùng dấu chấm (VD 7.5).
+   - Dữ liệu chỉ lưu trong bộ nhớ, thoát chương trình là mất.
